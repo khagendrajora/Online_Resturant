@@ -7,7 +7,8 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import axios from 'axios';
 import { isAuthenticated } from '../auth/authIndex';
 import Card from './Card';
-
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip';
 
 
 const Navbar = () => {
@@ -76,6 +77,7 @@ const Navbar = () => {
 
     return (
         <>
+            <Tooltip id='my-tooltip' />
             <nav className='nav'>
                 <ul className='fs-3 m-2'>
                     <Link to='/' className='text-white'><em>Happy Meal</em></Link>
@@ -98,13 +100,25 @@ const Navbar = () => {
                                     )
                                     }
                                 </li>
-                                <Link to='/mycart'> <li><FontAwesomeIcon icon={faCartShopping} size='2x' className='me-4 text-black' /></li></Link>
+                                <Link to='/mycart'> <li><FontAwesomeIcon icon={faCartShopping} size='2x' className='me-4 text-black'
+                                    data-tooltip-id='my-tooltip'
+                                    data-tooltip-content='My Cart'
+                                    data-tooltip-position='top'
+                                /></li></Link>
                             </ul>
                         }
                         {!token &&
                             <ul className='col-5 d-flex justify-content-end'>
-                                <Link to='/login'> <li><FontAwesomeIcon icon={faRightToBracket} size='2x' className='me-5 text-black' /></li></Link>
-                                <Link to='/signup'><li><FontAwesomeIcon icon={faUserPlus} size='2x' className='me-3 text-black' /></li> </Link>
+                                <Link to='/login'> <li><FontAwesomeIcon icon={faRightToBracket} size='2x' className='me-5 text-black'
+                                    data-tooltip-id='my-tooltip'
+                                    data-tooltip-content='Login'
+                                    data-tooltip-position='top'
+                                /></li></Link>
+                                <Link to='/signup'><li><FontAwesomeIcon icon={faUserPlus} size='2x' className='me-3 text-black'
+                                    data-tooltip-id='my-tooltip'
+                                    data-tooltip-content='Sign Up'
+                                    data-tooltip-position='top'
+                                /></li> </Link>
 
                             </ul>
                         }

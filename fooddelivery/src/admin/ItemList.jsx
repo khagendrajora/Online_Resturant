@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { Tooltip } from 'react-tooltip'
 
 
 export const ItemList = () => {
@@ -58,10 +59,10 @@ export const ItemList = () => {
     return (
         <>
             <ToastContainer theme='colored' position='top-center' />
-
+            <Tooltip id='my-tooltip' />
             {windowSize.current > 576 &&
                 <div className='input-wrapper'>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
                     <input type='search' className='form-control' value={search} onChange={handleChange} placeholder='Search' />
                 </div>
             }
@@ -97,8 +98,16 @@ export const ItemList = () => {
                                         <td>{item.item_price}</td>
                                         <td>
                                             <div className='action'>
-                                                <button className='btn btn-danger me-1' onClick={() => Delete(item._id)}><FaTrash /></button>
-                                                <button className='btn btn-success' onClick={() => Edit(item._id)}><FaPenAlt /></button>
+                                                <button className='btn btn-danger me-1'
+                                                    data-tooltip-id='my-tooltip'
+                                                    data-tooltip-content='Delete'
+                                                    data-tooltip-position='top'
+                                                    onClick={() => Delete(item._id)}><FaTrash /></button>
+                                                <button className='btn btn-success'
+                                                    data-tooltip-id='my-tooltip'
+                                                    data-tooltip-content='Edit'
+                                                    data-tooltip-position='top'
+                                                    onClick={() => Edit(item._id)}><FaPenAlt /></button>
                                             </div>
                                         </td>
                                     </tr>
