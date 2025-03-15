@@ -4,8 +4,7 @@ import { API } from '../Config'
 import { FaPenAlt, FaTrash } from 'react-icons/fa'
 import { ToastContainer, toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+
 import { Tooltip } from 'react-tooltip'
 
 
