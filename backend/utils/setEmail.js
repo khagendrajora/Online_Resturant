@@ -13,7 +13,7 @@ const sendEmail = options => {
             // user: process.env.SMTP_USER,
             // pass: process.env.SMTP_PAS,
             user: 'khagijora2074@gmail.com',
-            pass: 'vwuvzacadvyyyogx'
+            pass: 'gkdjojpbrdixzyjk'
 
         }
     });
