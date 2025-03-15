@@ -8,7 +8,7 @@ mongoose.connect(process.env.DATABASE)
         fetch_data.find({}).toArray()
 
             .then((data) => {
-                // console.log(data)
+               
                 const fetch_cat = mongoose.connection.db.collection('foodCategory')
                 fetch_cat.find({}).toArray()
                     .then((category) => {

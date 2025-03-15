@@ -15,7 +15,7 @@ export const Home = () => {
   const handleChange = (e) => {
     setSearch(e.target.value)
   }
-  console.log(search)
+
   useEffect(() => {
     const fetchItem = async () => {
       try {

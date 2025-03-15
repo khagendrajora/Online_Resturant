@@ -15,7 +15,7 @@ export const ProceedToPay = () => {
         const data = {
             items: buyedItems
         }
-        console.log(data)
+     
         const head = {
             "Content-Type": "application/json"
         }

@@ -32,9 +32,7 @@ exports.directPayment = async (req, res) => {
 
     if (!Array.isArray(items)) {
         return res.status(400).json({ error: 'Items must be an array' });
-    } else {
-        console.log(items)
-    }
+    } 
 
 
     const lineItems = items.map((item) => ({

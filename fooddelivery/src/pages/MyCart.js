@@ -38,7 +38,7 @@ const MyCart = () => {
             }
         }
     }, [cartItem])
-    console.log(totalBill)
+    
     //increase quantity
     const IncreaseQty = ((i, id, total, price) => {
         const updateCart = [...mycartItem]

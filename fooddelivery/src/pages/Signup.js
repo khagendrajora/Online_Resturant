@@ -16,9 +16,9 @@ export const Signup = () => {
             },
             body: JSON.stringify(values)
         })
-        console.log(values)
+  
         if (!response.ok) {
-            console.log(response)
+           
             toast.error('Failed to create Account')
         } else {
             toast.success("Account Created Sucessfully")

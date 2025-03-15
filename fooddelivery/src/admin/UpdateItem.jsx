@@ -23,8 +23,7 @@ const UpdateItem = () => {
                 setItemCategory(res.data.item_category)
                 setItemDescription(res.data.item_description)
                 setItemPrice(res.data.item_price)
-                console.log(res.data)
-                console.log(initialValues)
+                
             })
             .catch(err => console.log(err))
     })
