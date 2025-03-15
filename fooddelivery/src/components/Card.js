@@ -1,15 +1,16 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-// import {  IMG_URL } from '../Config';
+import {  IMG_URL } from '../Config';
 import { ToastContainer, toast } from 'react-toastify';
+import { API } from '../Config';
 
 
 const Card = (props) => {
     const [item, setItem] = useState({})
     const { _id, item_name, item_category, item_description, item_price, item_image } = props.item
     useEffect(() => {
-        axios.get(`https://online-resturant-ruddy.vercel.app/api/itemdetails/${_id}`)
+        axios.get(`${API}/itemdetails/${_id}`)
             .then(res => setItem(res.data))
             .catch(err => console.log(err))
 
@@ -63,7 +64,7 @@ const Card = (props) => {
             <div className='card-container'>
                 <div className="card m-3" >
                     <div className='card-img-top'>
-                        <img className="" src={`https://online-resturant-ruddy.vercel.app/${item_image}`} alt="pp" />
+                        <img className="" src={`${IMG_URL}/${item_image}`} alt="pp" />
                     </div>
                     <div className="card-body">
                         <div className='card-name'>

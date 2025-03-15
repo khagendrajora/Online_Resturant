@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000
 
 const _dirname = path.resolve()
 const corsOptions = {
-  origin: 'https://online-resturant-ruddy.vercel.app',
+  origin: 'https://online-resturant-nraq.onrender.com',
   credentials: true,            //access-control-allow-credentials:true
   optionSuccessStatus: 200
 }
