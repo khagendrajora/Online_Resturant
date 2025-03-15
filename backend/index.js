@@ -12,10 +12,8 @@ const bodyParser = require('body-parser')
 const port = process.env.PORT || 5000
 
 const _dirname = path.resolve()
-
-const allowedOrigins = ['http://localhost:3000', 'https://online-resturant-nraq.onrender.com','https://online-resturant-ruddy.vercel.app']
 const corsOptions = {
-  origin: allowedOrigins,
+  origin: 'https://online-resturant-ruddy.vercel.app/',
   credentials: true,            //access-control-allow-credentials:true
   optionSuccessStatus: 200
 }
