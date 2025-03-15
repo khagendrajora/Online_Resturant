@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { API } from '../Config'
+// import { API } from '../Config'
 import { ToastContainer, toast } from 'react-toastify'
 import axios from 'axios'
 
@@ -53,7 +53,7 @@ const ItemUpload = () => {
                 }
 
             }
-            const response = await axios.post(`${API}/itemupload`, formData, Config);
+            const response = await axios.post(`https://online-resturant-ruddy.vercel.app/api/itemupload`, formData, Config);
             if (response) {
                 toast.success("Item added successfully")
             }
