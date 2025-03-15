@@ -15,11 +15,10 @@ export const ProceedToPay = () => {
         const data = {
             items: buyedItems
         }
-     
         const head = {
             "Content-Type": "application/json"
         }
-        const payment = await fetch('http://localhost:5000/api/create-checkout-secessions', {
+        const payment = await fetch('https://online-resturant-nraq.onrender.com/api/create-checkout-secessions', {
             method: "POST",
             headers: head,
             body: JSON.stringify(data)

@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify'
 export const Signup = () => {
 
     const handleSubmit = async (values) => {
-        const response = await fetch('http://localhost:5000/api/createUser', {
+        const response = await fetch('https://online-resturant-nraq.onrender.com/api/createUser', {
             method: 'POST',
             headers: {
                 Accept: "application.json",

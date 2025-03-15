@@ -9,7 +9,7 @@ import { IMG_URL } from '../Config';
 const MyCart = () => {
     const [cartItem, setCartItem] = useState([])
     const [mycartItem, setMyCartItem] = useState([])
-    const [totalBill, setTotalBill] = useState('')
+    const  setTotalBill = useState('')
 
 
     useEffect(() => {
@@ -80,7 +80,7 @@ const MyCart = () => {
         const headers = {
             "Content-Type": "application/json"
         }
-        const response = await fetch('http://localhost:5000/api/create-checkout-secession', {
+        const response = await fetch('https://online-resturant-nraq.onrender.com/api/create-checkout-secession', {
             method: "POST",
             headers: headers,
             body: JSON.stringify(body)

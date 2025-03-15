@@ -6,7 +6,7 @@ import { Link, useNavigate, } from 'react-router-dom'
 export const Login = () => {
   const navigate = useNavigate()
   const handleSubmit = async (values) => {
-    const response = await fetch('http://localhost:5000/api/login', {
+    const response = await fetch('https://online-resturant-nraq.onrender.com/api/login', {
       method: 'POST',
       headers: {
         Accept: "application.json",

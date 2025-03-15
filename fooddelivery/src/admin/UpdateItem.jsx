@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify'
 const UpdateItem = () => {
     const params = useParams()
     const id = params.id
-    const [initialValues, setInitialValues] = useState({})
+    const setInitialValues= useState({})
     const [item_name, setItemName] = useState('')
     const [item_category, setItemCategory] = useState('')
     const [item_description, setItemDescription] = useState('')
