@@ -37,7 +37,7 @@ const MyCart = () => {
                 console.log('not found')
             }
         }
-    }, [cartItem])
+    }, [cartItem,setTotalBill])
     
     //increase quantity
     const IncreaseQty = ((i, id, total, price) => {

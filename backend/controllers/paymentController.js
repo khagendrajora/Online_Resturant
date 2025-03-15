@@ -20,8 +20,8 @@ exports.payment = async (req, res) => {
         payment_method_types: ["card"],
         line_items: lineItems,
         mode: "payment",
-        success_url: process.env.FRONTEND_URL + '\/success\/',
-        cancel_url: process.env.FRONTEND_URL + '\/failed\/'
+        success_url:  'https://online-resturant-nraq.onrender.com\/success\/',
+        cancel_url:  'https://online-resturant-nraq.onrender.com\/failed\/'
     })
     res.json({ id: session.id })
 
@@ -53,8 +53,8 @@ exports.directPayment = async (req, res) => {
         payment_method_types: ["card"],
         line_items: lineItems,
         mode: "payment",
-        success_url: process.env.FRONTEND_URL + '\/success\/',
-        cancel_url: process.env.FRONTEND_URL + '\/failed\/'
+        success_url:  'https://online-resturant-nraq.onrender.com\/success\/',
+        cancel_url:  'https://online-resturant-nraq.onrender.com\/failed\/'
     })
     res.json({ id: session.id })
 

@@ -39,7 +39,7 @@ exports.createUser = async (req, res) => {
                     return res.status(400).json({ error: 'failed to generate token' })
                 }
 
-                const url = process.env.FRONTEND_URL + '\/email\/confirmation\/' + token.token
+                const url ='https://online-resturant-nraq.onrender.com\/email\/confirmation\/' + token.token
                 //send email
                 sendEmail({
                     from: 'no-reply@foody.com',
@@ -179,7 +179,7 @@ exports.forgetPwd = async (req, res) => {
             if (!token) {
                 res.status(400).json({ error: 'token not generated' })
             }
-            const url = process.env.FRONTEND_URL + '\/resetpassword\/' + token.token
+            const url =  'https://online-resturant-nraq.onrender.com\/resetpassword\/' + token.token
             sendEmail({
                 from: 'no-reply@foody.com',
                 to: data.email,
@@ -321,7 +321,7 @@ exports.userEdit = async (req, res) => {
         return res.status(400).json({ error: 'failed to generate token' })
     }
 
-    const url = process.env.FRONTEND_URL + '\/email\/confirmation\/' + token.token
+    const url ='https://online-resturant-nraq.onrender.com\/email\/confirmation\/' + token.token
     sendEmail({
         from: 'no-reply@foody.com',
         to: user.email,
