@@ -15,6 +15,7 @@ const port = process.env.PORT || 5000
 const _dirname = path.resolve()
 const corsOptions = {
   origin: 'https://online-resturant-nraq.onrender.com',
+  // origin: 'http://localhost:3000',
   credentials: true,            //access-control-allow-credentials:true
   optionSuccessStatus: 200
 }
