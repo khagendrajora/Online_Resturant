@@ -20,7 +20,7 @@ export const Home = () => {
     const fetchItem = async () => {
       try {
 
-        const res = await axios.get(`${API}/api/itemlist`)
+        const res = await axios.get(`${API}/itemlist`)
         if(Array.isArray(res.data)){
           setitems(res.data)
         }

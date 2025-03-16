@@ -6,6 +6,7 @@ const cors = require('cors');
 // app.use(cors());  
 const path = require('path')
 const bodyParser = require('body-parser')
+const fileUpload = require('express-fileupload')
 
 
 
@@ -19,7 +20,9 @@ const corsOptions = {
 }
 app.use(cors(corsOptions))
 
-
+app.use(fileUpload({
+  useTempFiles: true
+}))
 
 const createUser = require('./routes/UserRoute')
 const item = require('./routes/ItemRoute')

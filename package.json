@@ -4,14 +4,15 @@
   "description": "Khagendra",
   "main": "index.js",
   "scripts": {
-    "dev":"node backend/index.js",
-    "build":"npm install && npm install --prefix fooddelivery && npm run build --prefix fooddelivery",
-    "start":"node backend/index.js"   
+    "dev": "node backend/index.js",
+    "build": "npm install && npm install --prefix fooddelivery && npm run build --prefix fooddelivery",
+    "start": "node backend/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",

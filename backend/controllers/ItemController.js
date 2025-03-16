@@ -1,17 +1,19 @@
 const Item = require('../models/Product')
+const cloudinary = require('cloudinary').v2
 
-
+cloudinary.config({ 
+        cloud_name: 'dwepmpy6w', 
+        api_key: '934775798563485', 
+        api_secret: '0fc2bZa8Pv7Vy22Ji7AhCjD0ErA' // Click 'View API Keys' above to copy your API secret
+    });
 
 exports.ItemUpload = async (req, res) => {
-
     let item = new Item({
         item_name: req.body.item_name,
         item_category: req.body.item_category,
         item_description: req.body.item_description,
         item_image: req.file.path,
         item_price: req.body.item_price,
-
-
     })
     item = await item.save()
     if (!item) {
