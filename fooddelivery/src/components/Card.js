@@ -64,7 +64,7 @@ const Card = (props) => {
             <div className='card-container'>
                 <div className="card m-3" >
                     <div className='card-img-top'>
-                        <img className="" src={`${IMG_URL}/${item_image}`} alt="pp" />
+                        <img className="" src={`${item_image}`} alt="image" />
                     </div>
                     <div className="card-body">
                         <div className='card-name'>
