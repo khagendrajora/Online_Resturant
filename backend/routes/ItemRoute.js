@@ -3,7 +3,7 @@ const router = express.Router()
 const { ItemUpload, itemDetails, itemList, deleteItem, updateItem } = require('../controllers/ItemController')
 
 const { requireAdmin } = require('../controllers/UserController')
-// const upload = require('../middleware/fileUpload')
+const upload = require('../middleware/fileUpload')
 const fileUpload = require('express-fileupload');
 
 router.post('/itemupload', fileUpload(), ItemUpload)
