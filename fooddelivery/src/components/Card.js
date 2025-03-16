@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import {  IMG_URL } from '../Config';
+// import {  IMG_URL } from '../Config';
 import { ToastContainer, toast } from 'react-toastify';
 import { API } from '../Config';
 
@@ -64,7 +64,7 @@ const Card = (props) => {
             <div className='card-container'>
                 <div className="card m-3" >
                     <div className='card-img-top'>
-                        <img className="" src={`${item_image}`} alt="image" />
+                        <img className="" src={`${item_image}`} alt="item" />
                     </div>
                     <div className="card-body">
                         <div className='card-name'>
