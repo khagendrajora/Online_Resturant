@@ -1,12 +1,13 @@
 const express = require('express')
 const router = express.Router()
 const { ItemUpload, itemDetails, itemList, deleteItem, updateItem } = require('../controllers/ItemController')
-const { validation } = require('../validation/Validation')
-const { requireAdmin } = require('../controllers/UserController')
-const upload = require('../middleware/fileUpload')
 
-router.post('/itemupload', upload.single('item_image'),validation, ItemUpload)
-// router.post('/itemupload', ItemUpload, validation)
+const { requireAdmin } = require('../controllers/UserController')
+// const upload = require('../middleware/fileUpload')
+const fileUpload = require('express-fileupload');
+
+router.post('/itemupload', fileUpload(), ItemUpload)
+
 router.get('/itemdetails/:id', itemDetails)
 router.get('/itemlist', itemList)
 router.delete('/deleteitem/:id', deleteItem)
