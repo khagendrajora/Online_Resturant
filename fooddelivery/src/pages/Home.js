@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Card from '../components/Card'
-// import { API } from '../Config'
 import axios from 'axios'
 import { Helmet } from 'react-helmet'
 import { Carousels } from '../components/Carousels'
+import { API } from '../Config'
 
 
 export const Home = () => {
@@ -20,7 +20,7 @@ export const Home = () => {
     const fetchItem = async () => {
       try {
 
-        const res = await axios.get(`https://online-resturant-ruddy.vercel.app/api/itemlist`)
+        const res = await axios.get(`${API}/api/itemlist`)
         setitems(res.data)
       } catch (error) {
         console.error("error in fetch", error)
