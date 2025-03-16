@@ -21,14 +21,18 @@ export const Home = () => {
       try {
 
         const res = await axios.get(`${API}/api/itemlist`)
-        setitems(res.data)
+        if(Array.isArray(res.data)){
+          setitems(res.data)
+        }
+        
       } catch (error) {
         console.error("error in fetch", error)
+        setitems([])
       }
     }
     fetchItem()
   }, [])
-  console.log(items)
+
 
   useEffect(() => {
     if (search) {
@@ -55,10 +59,10 @@ export const Home = () => {
       <Carousels />
       <div>
         <div className='d-flex flex-row col-12 col-sm-12 flex-wrap justify-content-center'>
-          {filteredResult && filteredResult.map((item, i) =>
+          {Array.isArray(filteredResult) && filteredResult.map((item, i) =>
             <Card key={i} item={item}></Card>
           )}
-          {items &&
+          {Array.isArray(items) &&
             items.map((items, i) => (
               <Card key={i} item={items}></Card>
             ))
