@@ -8,8 +8,11 @@ cloudinary.config({
     });
 
 exports.ItemUpload = async (req, res) => {
+    try {
+        
+    
     const file = req.files.item_image
-    await cloudinary.uploader.upload(file.tempFilrPath, (err, result) => {
+    await cloudinary.uploader.upload(file.tempFilePath, async (err, result) => {
         console.log(result)
          let item = new Item({
         item_name: req.body.item_name,
@@ -18,12 +21,15 @@ exports.ItemUpload = async (req, res) => {
         item_image: result.url,
         item_price: req.body.item_price,
     })
-    item =  item.save()
-    if (!item) {
-        return res.status(400).json({ error: "Item not  uploaded" })
-    }
+    await item.save()
+    // if (!item) {
+    //     return res.status(400).json({ error: "Item not  uploaded" })
+    // }
     res.send(item)
     })
+        }catch (err) {
+            console.log(err)
+        }
 }
 
 //itemDetails
