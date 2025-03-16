@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaTrash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import { loadStripe } from '@stripe/stripe-js';
-import { IMG_URL } from '../Config';
+// import { IMG_URL } from '../Config';
 
 
 const MyCart = () => {
@@ -117,7 +117,7 @@ const MyCart = () => {
                                             </div>
                                             <div className="mycartimg">
                                                 <img
-                                                    src={`${IMG_URL}/${item.item_img}`}
+                                                    src={`${item.item_img}`}
                                                     className="img-fluid rounded-3" alt="" />
                                             </div>
                                             <div className="col-2">

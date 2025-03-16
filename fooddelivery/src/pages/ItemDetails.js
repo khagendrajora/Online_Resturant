@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { API, IMG_URL } from '../Config'
+import { API } from '../Config'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -125,11 +125,11 @@ export const ItemDetails = () => {
         <div className='detailSub-container'>
           <div className="item-image">
             <div className='subItem-image'>
-              <div className='small-image'><img src={`${IMG_URL}/${item.item_image}`} alt={item.item_name} /></div>
-              <div className='small-image'> <img src={`${IMG_URL}/${item.item_image}`} alt={item.item_name} /></div>
-              <div className='small-image'><img src={`${IMG_URL}/${item.item_image}`} alt={item.item_name} /></div>
+              <div className='small-image'><img src={`${item.item_image}`} alt={item.item_name} /></div>
+              <div className='small-image'> <img src={`${item.item_image}`} alt={item.item_name} /></div>
+              <div className='small-image'><img src={`${item.item_image}`} alt={item.item_name} /></div>
             </div>
-            <img src={`${IMG_URL}/${item.item_image}`} alt={item.item_name} />
+            <img src={`${item.item_image}`} alt={item.item_name} />
           </div>
           <div className="item-info">
             <div className='item-name'>{item.item_name}</div>

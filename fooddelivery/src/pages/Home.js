@@ -66,7 +66,6 @@ export const Home = () => {
             items.map((items, i) => (
               <Card key={i} item={items}></Card>
             ))
-
           }
         </div>
         <hr />
