@@ -10,11 +10,15 @@ cloudinary.config({
 exports.ItemUpload = async (req, res) => {
     try {
         
-       if (!req.file) {
+       if (!req.files || !req.files.item_image) {
             return res.status(400).json({ message: "No image uploaded" });
         }
     const file = req.files.item_image.tempFilePath
-        const result = await cloudinary.uploader.upload(file)
+        const result = await cloudinary.uploader.upload(file, {
+              folder: "items",
+            use_filename: true,
+            unique_filename: false
+        })
         
         console.log(result)
 

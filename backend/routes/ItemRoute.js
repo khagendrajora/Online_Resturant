@@ -4,9 +4,9 @@ const { ItemUpload, itemDetails, itemList, deleteItem, updateItem } = require('.
 
 const { requireAdmin } = require('../controllers/UserController')
 const upload = require('../middleware/fileUpload')
-const fileUpload = require('express-fileupload');
 
-router.post('/itemupload', fileUpload(), ItemUpload)
+
+router.post('/itemupload', ItemUpload)
 
 router.get('/itemdetails/:id', itemDetails)
 router.get('/itemlist', itemList)

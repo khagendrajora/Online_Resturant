@@ -22,7 +22,8 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 app.use(fileUpload({
-  useTempFiles: true
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
 }))
 
 const createUser = require('./routes/UserRoute')
