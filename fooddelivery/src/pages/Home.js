@@ -28,6 +28,7 @@ export const Home = () => {
     }
     fetchItem()
   }, [])
+  console.log(items)
 
   useEffect(() => {
     if (search) {
@@ -57,7 +58,7 @@ export const Home = () => {
           {filteredResult && filteredResult.map((item, i) =>
             <Card key={i} item={item}></Card>
           )}
-          {
+          {items &&
             items.map((items, i) => (
               <Card key={i} item={items}></Card>
             ))
